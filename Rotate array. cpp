@@ -1,0 +1,13 @@
+ void rotateArr(int arr[], int d, int n){
+        // code here
+        int i;
+        queue<int> q;
+        for(i=0; i<d; i++)
+        q.push(arr[i]);
+        for(i=0; i<n-d; i++)
+        arr[i] = arr[i+d];
+        for(i=n-d; i<n; i++){
+            arr[i] = q.front();
+            q.pop();
+        }
+    }
